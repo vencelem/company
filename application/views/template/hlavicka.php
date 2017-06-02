@@ -39,6 +39,7 @@
             <ul class="nav nav-pills pull-right">
                 <li role="presentation"><a href="<?php echo base_url(); ?>index.php/Home/index">Home</a></li>
                 <li role="presentation"><a href="<?php echo base_url(); ?>index.php/Employees/index">Employess</a></li>
+                <li role="presentation"><a href="<?php echo base_url(); ?>index.php/Rides/index">Rides</a></li>
                 <li role="presentation"><a href="<?php echo base_url(); ?>index.php/Vehicles/index">Vehicles</a></li>
                 <li role="presentation"><a href="<?php echo base_url(); ?>index.php/Visited_workplaces/index">Visited workplaces</a></li>
                 <li role="presentation"><a href="<?php echo base_url(); ?>index.php/Workplaces/index">Workplaces</a></li>
