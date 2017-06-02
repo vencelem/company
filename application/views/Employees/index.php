@@ -25,7 +25,8 @@
                         <td><?php echo $employees->email;?></td>
                         <td><?php  echo $employees->number; ?></td>
                         <td><?php  echo $employees->adress; ?></td>
-                        <td>Edit, delete</td>
+                        <td><a href="<?php echo base_url('index.php/Employees/zmen/'.$employees->ID); ?>"><button type="submit" class="btn btn-info">Zmeniť</button></a>
+                            <a href="<?php echo base_url('index.php/Employees/vymaz/'.$employees->ID); ?>"><button type="submit" class="btn btn-danger">Vymazať</button></a></td></td>
                     </tr>
                     <?php
                 }
@@ -34,4 +35,5 @@
             </table>
         </div>
     </div>
+    <center><a href="<?php echo base_url('index.php/Employees/pridaj'); ?>"><button type="submit" class="btn btn-primary">Pridať záznam</button></a></center>
 </div>

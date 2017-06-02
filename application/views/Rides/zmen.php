@@ -1,6 +1,6 @@
 <div class="container">
     <center><h3>Pridaj záznam</h3></center>
-    <form action="<?php echo base_url('index.php/Rides/potvrd') ?>" method="post">
+    <form action="<?php echo base_url('index.php/Rides/aktualizuj') ?>" method="post">
         <input type="hidden" name="txt_hidden" value="<?php echo $rides->ID; ?>">
         <div class="form-group">
             <label>Employee:</label>

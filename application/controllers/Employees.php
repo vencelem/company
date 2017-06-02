@@ -15,4 +15,32 @@ class Employees extends CI_Controller {
         $this->load->view('Employees/index', $data);
         $this->load->view('template/pata');
     }
+
+    public function pridaj(){
+        $this->load->view('template/hlavicka');
+        $this->load->view('Employees/pridaj');
+        $this->load->view('template/pata');
+    }
+
+    public function potvrd(){
+        $this->m->potvrd();
+        redirect(base_url('index.php/Employees/index'));
+    }
+
+    public function zmen($id){
+        $data['employee'] = $this->m->getEmployeeById($id);
+        $this->load->view('template/hlavicka');
+        $this->load->view('Employees/zmen', $data);
+        $this->load->view('template/pata');
+    }
+
+    public function aktualizuj(){
+        $this->m->aktualizuj();
+        redirect(base_url('index.php/Employees/index'));
+    }
+
+    public function vymaz($id){
+        $this->m->vymaz($id);
+        redirect(base_url('index.php/Employees/index'));
+    }
 }
