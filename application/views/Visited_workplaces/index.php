@@ -19,7 +19,8 @@
                         <td><?php  echo $visited_workplaces->ID; ?></td>
                         <td><?php  echo $visited_workplaces->workplaces_ID; ?></td>
                         <td><?php  echo $visited_workplaces->rides_ID; ?></td>
-                        <td>Edit, delete</td>
+                        <td><a href="<?php echo base_url('index.php/Visited_workplaces/zmen/'.$visited_workplaces->ID); ?>"><button type="submit" class="btn btn-info">Zmeniť</button></a>
+                            <a href="<?php echo base_url('index.php/Visited_workplaces/vymaz/'.$visited_workplaces->ID); ?>"><button type="submit" class="btn btn-danger">Vymazať</button></a></td></td>
                     </tr>
                     <?php
                 }
@@ -28,4 +29,5 @@
             </table>
         </div>
     </div>
+    <center><a href="<?php echo base_url('index.php/Visited_workplaces/pridaj'); ?>"><button type="submit" class="btn btn-primary">Pridať záznam</button></a></center>
 </div>
