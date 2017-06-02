@@ -29,6 +29,15 @@ class Rides extends CI_Controller {
         redirect(base_url('index.php/Rides/index'));
     }
 
+    public function zmen($id){
+        $data['vehicle'] = $this->m->getVid();
+        $data['employee'] = $this->m->getEid();
+        $data['rides'] = $this->m->getRideById($id);
+        $this->load->view('template/hlavicka');
+        $this->load->view('Rides/zmen', $data);
+        $this->load->view('template/pata');
+    }
+
     public function aktualizuj(){
         $this->m->aktualizuj();
         redirect(base_url('index.php/Rides/index'));

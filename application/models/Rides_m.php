@@ -44,8 +44,6 @@ class Rides_m extends CI_Model
         }
     }
 
-
-
     public function potvrd(){
         $arr = array(
             'employees_ID'=>$this->input->post('employees_ID'),

@@ -1,15 +1,21 @@
 <div class="container">
     <center><h3>Pridaj záznam</h3></center>
     <form action="<?php echo base_url('index.php/Rides/potvrd') ?>" method="post">
+        <input type="hidden" name="txt_hidden" value="<?php echo $rides->ID; ?>">
         <div class="form-group">
             <label>Employee:</label>
             <select name="employees_ID">
                 <?php
                 if($employee){
                     foreach($employee as $employee){
-                        ?>
-                        <option value="<?php echo $employee->ID; ?>"><?php echo $employee->ID; ?></option>
-                        <?php
+                        if($rides->employees_ID == $employee->ID) {
+                            ?>
+                            <option selected value="<?php echo $employee->ID; ?>"><?php echo $employee->ID; ?></option>
+                            <?php
+                        }else { ?>
+                            <option value="<?php echo $employee->ID; ?>"><?php echo $employee->ID; ?></option>
+                            <?php
+                        }
                     }
                 }
                 ?>
@@ -18,17 +24,17 @@
 
         <div class="form-group">
             <label for="pwd">Start:</label>
-            <input type="text" class="form-control" placeholder="YYYY-MM-DD HH:MM:SS" name="start">
+            <input type="text" class="form-control" value="<?php echo $rides->start; ?>"  placeholder="YYYY-MM-DD HH:MM:SS" name="start">
         </div>
 
         <div class="form-group">
             <label for="pwd">End:</label>
-            <input type="text" class="form-control" placeholder="YYYY-MM-DD HH:MM:SS" name="end">
+            <input type="text" class="form-control" value="<?php echo $rides->end; ?>" placeholder="YYYY-MM-DD HH:MM:SS" name="end">
         </div>
 
         <div class="form-group">
             <label for="pwd">Distance:</label>
-            <input type="text" class="form-control" name="distance">
+            <input type="text" value="<?php echo $rides->distance; ?>" class="form-control" name="distance">
         </div>
 
         <div class="form-group">
@@ -37,9 +43,14 @@
                 <?php
                 if($vehicle){
                     foreach($vehicle as $vehicle){
+                        if($rides->vehicles_ID == $vehicle->ID) {
                         ?>
-                        <option value="<?php echo $vehicle->ID; ?>"><?php echo $vehicle->ID; ?></option>
+                        <option selected value="<?php echo $vehicle->ID; ?>"><?php echo $vehicle->ID; ?></option>
                         <?php
+                        }else { ?>
+                            <option value="<?php echo $vehicle->ID; ?>"><?php echo $vehicle->ID; ?></option>
+                            <?php
+                        }
                     }
                 }
                 ?>
