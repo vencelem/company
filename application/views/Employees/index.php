@@ -1,6 +1,6 @@
 <div class="container margin">
     <div class="panel panel-default">
-        <div class="panel-heading">Workplaces</div>
+        <div class="panel-heading">Employees</div>
         <div class="panel-body">
             <table class="table table-striped">
                 <thead>
