@@ -21,7 +21,8 @@
                         <td><?php  echo $vehicles->brand; ?></td>
                         <td><?php  echo $vehicles->model; ?></td>
                         <td><?php echo $vehicles->average_consumption;?></td>
-                        <td>Edit, delete</td>
+                        <td><a href="<?php echo base_url('index.php/Vehicles/zmen/'.$vehicles->ID); ?>"><button type="submit" class="btn btn-info">Zmeniť</button></a>
+                            <a href="<?php echo base_url('index.php/Vehicles/vymaz/'.$vehicles->ID); ?>"><button type="submit" class="btn btn-danger">Vymazať</button></a></td></td>
                     </tr>
                     <?php
                 }
@@ -30,4 +31,5 @@
             </table>
         </div>
     </div>
+    <center><a href="<?php echo base_url('index.php/Vehicles/pridaj'); ?>"><button type="submit" class="btn btn-primary">Pridať záznam</button></a></center>
 </div>
