@@ -4,9 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Rides_m extends CI_Model
 {
-    public function getRides()
+    public function getRides($limit = 0, $offset = 0)
     {
-        $query = $this->db->get('rides');
+        $query = $this->db->get('rides', $offset, $limit);
         if ($query->num_rows() > 0) {
             return $query->result();
         } else {

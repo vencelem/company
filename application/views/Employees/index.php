@@ -33,6 +33,9 @@
                 ?>
                 </tbody>
             </table>
+            <center>
+                <?php echo $this->pagination->create_links() ?>
+            </center>
         </div>
     </div>
     <center><a href="<?php echo base_url('index.php/Employees/pridaj'); ?>"><button type="submit" class="btn btn-primary">Pridať záznam</button></a></center>

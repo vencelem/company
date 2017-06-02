@@ -4,9 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Workplaces_m extends CI_Model
 {
-    public function getWorkplaces()
+    public function getWorkplaces($limit = 0, $offset = 0)
     {
-        $query = $this->db->get('workplaces');
+        $query = $this->db->get('workplaces', $offset, $limit);
         if ($query->num_rows() > 0) {
             return $query->result();
         } else {

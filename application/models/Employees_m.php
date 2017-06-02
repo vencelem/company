@@ -4,9 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Employees_m extends CI_Model
 {
-    public function getEmployees()
+    public function getEmployees($limit = 0, $offset = 0)
     {
-        $query = $this->db->get('employees');
+        $query = $this->db->get('employees', $offset, $limit);
         if ($query->num_rows() > 0) {
             return $query->result();
         } else {

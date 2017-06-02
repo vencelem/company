@@ -28,6 +28,9 @@
                 </tbody>
             </table>
         </div>
+        <center>
+            <?php echo $this->pagination->create_links() ?>
+        </center>
     </div>
     <center><a href="<?php echo base_url('index.php/Visited_workplaces/pridaj'); ?>"><button type="submit" class="btn btn-primary">Pridať záznam</button></a></center>
 </div>

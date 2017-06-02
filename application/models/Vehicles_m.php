@@ -4,9 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Vehicles_m extends CI_Model
 {
-    public function getVehicles()
+    public function getVehicles($limit = 0, $offset = 0)
     {
-        $query = $this->db->get('vehicles');
+        $query = $this->db->get('vehicles', $offset, $limit);
         if ($query->num_rows() > 0) {
             return $query->result();
         } else {
