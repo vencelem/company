@@ -45,5 +45,5 @@
                 <li role="presentation"><a href="<?php echo base_url(); ?>index.php/Workplaces/index">Workplaces</a></li>
             </ul>
         </nav>
-        <h3 class="text-muted">Taxi Emil</h3>
+        <h3 class="text-muted">Bussines trip</h3>
     </div>
