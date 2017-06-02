@@ -37,7 +37,7 @@
     <div class="header clearfix">
         <nav>
             <ul class="nav nav-pills pull-right">
-                <li role="presentation"><a href="<?php echo base_url(); ?>index.php/Home/index">Home</a></li>
+                <li role="presentation"><a href="<?php echo base_url(); ?>index.php/Chart/index">Home</a></li>
                 <li role="presentation"><a href="<?php echo base_url(); ?>index.php/Employees/index">Employess</a></li>
                 <li role="presentation"><a href="<?php echo base_url(); ?>index.php/Rides/index">Rides</a></li>
                 <li role="presentation"><a href="<?php echo base_url(); ?>index.php/Vehicles/index">Vehicles</a></li>
