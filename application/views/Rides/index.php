@@ -25,7 +25,8 @@
                         <td><?php echo $rides->end;?></td>
                         <td><?php  echo $rides->distance; ?></td>
                         <td><?php echo $rides->vehicles_ID;?></td>
-                        <td>Edit, delete</td>
+                        <td><a href="<?php echo base_url('index.php/Rides/zmen/'.$rides->ID); ?>"><button type="submit" class="btn btn-info">Zmeniť</button></a>
+                            <a href="<?php echo base_url('index.php/Rides/vymaz/'.$rides->ID); ?>"><button type="submit" class="btn btn-danger">Vymazať</button></a></td></td>
                     </tr>
                     <?php
                 }
@@ -34,4 +35,6 @@
             </table>
         </div>
     </div>
+    <center><a href="<?php echo base_url('index.php/Rides/pridaj'); ?>"><button type="submit" class="btn btn-primary">Pridať záznam</button></a></center>
 </div>
+
